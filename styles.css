@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0ef0d;
+    color: #D4D4D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    background-image: url('12.jpg');
+    background-size: cover;
+    background-position: center center;
+    animation: fadeInPage 1s ease-in-out;
+}
+
+/* Page Fade-in Animation */
+@keyframes fadeInPage {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(37, 37, 38, 0.8);
+    color: #61AFEF;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    animation: slideInDown 1s ease-out;
+}
+
+/* Header Slide-in Animation */
+@keyframes slideInDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #61AFEF;
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+/* Title Animation */
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+main {
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: rgba(45, 45, 48, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeInSection 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Section Fade-in Animation */
+@keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #61AFEF;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    color: #BEBEBE;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+input, select {
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: rgba(37, 37, 38, 0.8);
+    color: #D4D4D4;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+/* Input Focus Animation */
+input:focus, select:focus {
+    background-color: rgba(51, 51, 51, 0.8);
+    outline: none;
+    border-color: #61AFEF;
+    box-shadow: 0px 0px 12px rgba(97, 175, 239, 0.6);
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #61AFEF, #4E4EFF);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #4E4EFF, #61AFEF);
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Toggle Link */
+.toggle-link {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #61AFEF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+    color: #4E4EFF;
+    text-decoration: underline;
+}
+
+/* Logout Button */
+#logout-button {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#logout-button:hover {
+    background: linear-gradient(135deg, #C0392B, #E74C3C);
+    transform: scale(1.05);
+}
+
+/* List Animation */
+#recommendations li {
+    background: rgba(45, 45, 48, 0.8);
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInListItem 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* List Item Animation */
+@keyframes fadeInListItem {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    button, #logout-button { font-size: 1.1rem; }
+    form { align-items: center; }
+}
